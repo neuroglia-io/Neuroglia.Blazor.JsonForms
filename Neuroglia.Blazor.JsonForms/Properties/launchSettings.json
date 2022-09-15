@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "Neuroglia.Blazor.JsonForms": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:64490;http://localhost:64491"
+    }
+  }
+}

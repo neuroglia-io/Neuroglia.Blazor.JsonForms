@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+<!--<Project Sdk="Microsoft.NET.Sdk.Razor">-->
+ <PropertyGroup>
+    <Nullable>enable</Nullable>
+	 <ImplicitUsings>enable</ImplicitUsings>
+	 <TargetFramework>net6.0</TargetFramework>
+	 <OutputType>Library</OutputType>
+	 <Company>Neuroglia SPRL</Company>
+	 <Copyright>Copyright © 2021 Neuroglia SPRL. All rights reserved.</Copyright>
+	 <Authors>Neuroglia SPRL</Authors>
+	 <RepositoryUrl>https://github.com/neuroglia-io/framework</RepositoryUrl>
+	 <RepositoryType>git</RepositoryType>
+	 <PackageTags>neuroglia framework blazor jsonforms forms jsonschema</PackageTags>
+	 <Version>2.0.1.82</Version>
+	 <AssemblyVersion>2.0.1.82</AssemblyVersion>
+	 <FileVersion>2.0.1.82</FileVersion>
+	 <NeutralLanguage>en</NeutralLanguage>
+	 <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	 <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	 <PackageLicenseFile>LICENSE</PackageLicenseFile>
+	 <PackageIcon>logo_white_on_blue_256.png</PackageIcon>
+	 <IsPackable>true</IsPackable>
+	 <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SupportedPlatform Include="browser" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\Generated\" />
+  </ItemGroup>
+
+</Project>

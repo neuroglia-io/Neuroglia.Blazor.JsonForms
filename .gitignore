@@ -259,3 +259,5 @@ npm-debug.log
 testem.log
 thumbs.db
 yarn-error.log
+/jsonforms-angular-webcomponent/node_modules
+/jsonforms-angular-webcomponent/.angular/cache/15.2.1

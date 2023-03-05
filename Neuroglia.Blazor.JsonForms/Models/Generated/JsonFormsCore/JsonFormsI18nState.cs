@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonFormsI18nState
+    public interface JsonFormsI18nState
     {
         [System.Text.Json.Serialization.JsonPropertyName("locale")]
         string? Locale { get; set; }

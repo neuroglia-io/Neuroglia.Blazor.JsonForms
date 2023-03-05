@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// Additional context given to a tester in addition to UISchema and JsonSchema.
     /// </summary>
-    interface TesterContext
+    public interface TesterContext
     {
         /// <summary>
         /// The form wide configuration object given to JsonForms.

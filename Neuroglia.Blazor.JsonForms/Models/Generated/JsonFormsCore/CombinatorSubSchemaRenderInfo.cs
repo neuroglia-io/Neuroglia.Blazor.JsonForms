@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface CombinatorSubSchemaRenderInfo
+    public interface CombinatorSubSchemaRenderInfo
     {
         [System.Text.Json.Serialization.JsonPropertyName("label")]
         string Label { get; set; }

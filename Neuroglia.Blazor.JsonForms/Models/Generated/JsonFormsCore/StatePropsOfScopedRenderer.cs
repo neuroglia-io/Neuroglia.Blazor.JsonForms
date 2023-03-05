@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// State-based properties for UI schema elements that have a scope.
     /// </summary>
-    interface StatePropsOfScopedRenderer : StatePropsOfRenderer
+    public interface StatePropsOfScopedRenderer : StatePropsOfRenderer
     {
         /// <summary>
         /// Any validation errors that are caused by the data to be rendered.

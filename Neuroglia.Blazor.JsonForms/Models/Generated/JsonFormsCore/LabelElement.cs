@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// A label element.
     /// </summary>
-    interface LabelElement : UISchemaElement, Internationalizable
+    public interface LabelElement : UISchemaElement, Internationalizable
     {
         /// <summary>
         /// The text of label.

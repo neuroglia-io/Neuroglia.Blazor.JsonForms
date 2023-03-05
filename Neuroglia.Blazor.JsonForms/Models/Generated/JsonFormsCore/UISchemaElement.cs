@@ -2,9 +2,9 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
     /// <summary>
-    /// Common base interface for any UI schema element.
+    /// Common base public interface for any UI schema element.
     /// </summary>
-    interface UISchemaElement
+    public interface UISchemaElement
     {
         /// <summary>
         /// Any additional options.

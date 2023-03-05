@@ -5,7 +5,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// Represents a layout element which can order its children
     /// in a specific way.
     /// </summary>
-    interface Layout : UISchemaElement
+    public interface Layout : UISchemaElement
     {
         /// <summary>
         /// The child elements of this layout.

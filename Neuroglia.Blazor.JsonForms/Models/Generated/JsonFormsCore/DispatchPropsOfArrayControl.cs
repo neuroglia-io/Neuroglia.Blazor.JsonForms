@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// Dispatch props of a table control
     /// </summary>
-    interface DispatchPropsOfArrayControl
+    public interface DispatchPropsOfArrayControl
     {
         System.Action AddItem(string path, object value);
 

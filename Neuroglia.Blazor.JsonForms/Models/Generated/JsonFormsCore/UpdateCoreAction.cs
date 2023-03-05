@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface UpdateCoreAction
+    public interface UpdateCoreAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         object? Data { get; set; }

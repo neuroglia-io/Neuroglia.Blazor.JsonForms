@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface StatePropsOfJsonFormsRenderer : OwnPropsOfJsonFormsRenderer
+    public interface StatePropsOfJsonFormsRenderer : OwnPropsOfJsonFormsRenderer
     {
         [System.Text.Json.Serialization.JsonPropertyName("config")]
         object Config { get; set; }

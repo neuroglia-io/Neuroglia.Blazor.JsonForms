@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonSchema4
+    public interface JsonSchema4
     {
         [System.Text.Json.Serialization.JsonPropertyName("$ref")]
         string? Ref { get; set; }

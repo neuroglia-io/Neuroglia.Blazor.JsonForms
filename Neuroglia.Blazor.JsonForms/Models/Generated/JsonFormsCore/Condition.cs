@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// Represents a condition to be evaluated.
     /// </summary>
-    interface Condition
+    public interface Condition
     {
         /// <summary>
         /// The type of condition.

@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// Map for storing refs and the respective schemas they are pointing to.
     /// </summary>
-    interface ReferenceSchemaMap
+    public interface ReferenceSchemaMap
     {
         /// <summary>
         /// Map for storing refs and the respective schemas they are pointing to.

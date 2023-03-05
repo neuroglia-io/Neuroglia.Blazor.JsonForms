@@ -2,9 +2,9 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
     /// <summary>
-    /// Interface for describing an UI schema element that may be labeled.
+    /// public interface for describing an UI schema element that may be labeled.
     /// </summary>
-    interface Labelable<T>
+    public interface Labelable<T>
     {
         /// <summary>
         /// Label for UI schema element.

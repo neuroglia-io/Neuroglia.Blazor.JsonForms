@@ -1,0 +1,108 @@
+﻿@page "/"
+@using System.Text.Json
+@using Neuroglia.Blazor.JsonForms.Models.JsonFormsCore;
+
+<PageTitle>Demo</PageTitle>
+
+<label>
+    Read Only
+    <input type="checkbox" checked="@readOnly" @onchange="e => this.readOnly = !this.readOnly" />
+</label>
+<JsonForm 
+    Schema="schema" 
+    UISchema="uischema" 
+    Data="data" 
+    Options="options"
+    ReadOnly="readOnly"
+    DataChange="OnDataChange"
+></JsonForm>
+<h2>Form value</h2>
+<pre>
+    @JsonSerializer.Serialize(this._data);
+</pre>
+
+@code {
+    private object schema = JsonSerializer.Deserialize<object>($@"{{
+        ""type"": ""object"",
+        ""title"": ""Person"",
+        ""properties"": {{
+          ""name"": {{
+            ""type"": ""string"",
+            ""minLength"": 3
+          }},
+          ""birthDate"": {{
+            ""type"": ""string"",
+            ""format"": ""date""
+          }},
+          ""foo"": {{
+            ""type"": ""boolean"",
+            ""default"": true
+          }}
+        }}
+      }}")!; // Used JSON befcause of `default`
+
+    private object uischema = new
+    {
+        type = "VerticalLayout",
+        elements = new[]
+        {
+            new
+            {
+                type = "Control",
+                scope = "#/properties/foo",
+                label = "Toggle fields visibility"
+            } as object,
+            new
+            {
+                type = "HorizontalLayout",
+                rule = new
+                {
+                    effect = "SHOW",
+                    condition = new
+                    {
+                        type = "LEAF",
+                        scope =  "#/properties/foo",
+                        expectedValue = true
+                    }
+                },
+                elements = new []
+                {
+                    new
+                    {
+                        type = "Control",
+                        scope = "#/properties/name"
+                    },
+                    new
+                    {
+                        type = "Control",
+                        scope = "#/properties/birthDate"
+                    }
+                }
+            } as object
+    }
+    };
+
+    private object options = new
+    {
+        useDefaults = true
+    };
+
+    private object data = new
+    {
+        name = 3
+    };
+
+    // prevents data loop between setting the component param and reading the component data
+    private object _data = new
+    {
+        name = 3
+    };
+
+    private bool readOnly = false;
+
+    private void OnDataChange(object data)
+    {
+        this._data = data;
+        this.StateHasChanged();
+    }
+}

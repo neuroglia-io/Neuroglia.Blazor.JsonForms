@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// The state of a control.
     /// </summary>
-    interface ControlState
+    public interface ControlState
     {
         /// <summary>
         /// Whether the control is focused.

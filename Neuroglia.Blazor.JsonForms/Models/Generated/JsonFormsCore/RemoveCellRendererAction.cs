@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface RemoveCellRendererAction
+    public interface RemoveCellRendererAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("cell")]
         object Cell { get; set; }

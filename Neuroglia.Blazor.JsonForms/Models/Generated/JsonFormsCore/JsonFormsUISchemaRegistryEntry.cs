@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonFormsUISchemaRegistryEntry
+    public interface JsonFormsUISchemaRegistryEntry
     {
         [System.Text.Json.Serialization.JsonPropertyName("tester")]
         UISchemaTester Tester { get; set; }

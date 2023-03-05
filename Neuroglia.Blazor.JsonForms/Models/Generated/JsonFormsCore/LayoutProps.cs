@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface LayoutProps : StatePropsOfLayout
+    public interface LayoutProps : StatePropsOfLayout
     {
     }
 }

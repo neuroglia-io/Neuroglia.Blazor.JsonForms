@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// The state shape of JSONForms.
     /// </summary>
-    interface JsonFormsState
+    public interface JsonFormsState
     {
         /// <summary>
         /// Represents JSONForm's sub-state.

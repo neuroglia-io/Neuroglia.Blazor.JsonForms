@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface OwnPropsOfControl : OwnPropsOfRenderer
+    public interface OwnPropsOfControl : OwnPropsOfRenderer
     {
         [System.Text.Json.Serialization.JsonPropertyName("id")]
         string? Id { get; set; }

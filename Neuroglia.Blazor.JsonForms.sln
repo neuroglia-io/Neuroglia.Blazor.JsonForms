@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neuroglia.Blazor.JsonForms", "Neuroglia.Blazor.JsonForms\Neuroglia.Blazor.JsonForms.csproj", "{58AD14BD-06DC-463D-8CA0-38ECC5F6083C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neuroglia.Blazor.JsonForms", "Neuroglia.Blazor.JsonForms\Neuroglia.Blazor.JsonForms.csproj", "{58AD14BD-06DC-463D-8CA0-38ECC5F6083C}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "jsonforms-angular-webcomponent", "jsonforms-angular-webcomponent\jsonforms-angular-webcomponent.esproj", "{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neuroglia.Blazor.JsonForms.Demo", "Neuroglia.Blazor.JsonForms.Demo\Neuroglia.Blazor.JsonForms.Demo.csproj", "{58B996E7-4E0A-4AF4-AFF9-01C4224D32D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,16 @@ Global
 		{58AD14BD-06DC-463D-8CA0-38ECC5F6083C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AD14BD-06DC-463D-8CA0-38ECC5F6083C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58AD14BD-06DC-463D-8CA0-38ECC5F6083C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB8C253F-4043-4ACA-BBAA-6B3B8B08A999}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{58B996E7-4E0A-4AF4-AFF9-01C4224D32D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B996E7-4E0A-4AF4-AFF9-01C4224D32D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B996E7-4E0A-4AF4-AFF9-01C4224D32D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B996E7-4E0A-4AF4-AFF9-01C4224D32D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

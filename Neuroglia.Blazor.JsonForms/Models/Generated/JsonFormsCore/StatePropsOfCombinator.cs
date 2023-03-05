@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface StatePropsOfCombinator : StatePropsOfControl
+    public interface StatePropsOfCombinator : StatePropsOfControl
     {
         [System.Text.Json.Serialization.JsonPropertyName("indexOfFittingSchema")]
         double IndexOfFittingSchema { get; set; }

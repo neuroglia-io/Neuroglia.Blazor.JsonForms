@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// State-based props of a {@link Renderer}.
     /// </summary>
-    interface StatePropsOfRenderer
+    public interface StatePropsOfRenderer
     {
         /// <summary>
         /// All available cell renderers.

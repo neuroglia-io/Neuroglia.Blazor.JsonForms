@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// Represents an object that can be used to configure a label.
     /// </summary>
-    interface LabelDescription
+    public interface LabelDescription
     {
         /// <summary>
         /// Optional property that determines whether to show this label.

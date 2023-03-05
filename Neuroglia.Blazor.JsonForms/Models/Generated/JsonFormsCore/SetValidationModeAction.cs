@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface SetValidationModeAction
+    public interface SetValidationModeAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("type")]
         string Type { get; set; }

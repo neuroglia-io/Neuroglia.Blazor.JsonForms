@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonSchema7
+    public interface JsonSchema7
     {
         /// <summary>
         /// This is important because it tells refs where

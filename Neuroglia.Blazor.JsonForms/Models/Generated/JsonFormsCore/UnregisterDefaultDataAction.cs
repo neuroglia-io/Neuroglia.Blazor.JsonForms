@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface UnregisterDefaultDataAction
+    public interface UnregisterDefaultDataAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("schemaPath")]
         string SchemaPath { get; set; }

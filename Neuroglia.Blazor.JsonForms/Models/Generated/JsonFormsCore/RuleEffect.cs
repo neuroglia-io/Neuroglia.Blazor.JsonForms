@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// The different rule effects.
     /// </summary>
-    enum RuleEffect
+    public enum RuleEffect
     {
         /// <summary>
         /// Effect that disables the associated element.

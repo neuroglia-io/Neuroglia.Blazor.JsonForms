@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface SetTranslatorAction
+    public interface SetTranslatorAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("errorTranslator")]
         ErrorTranslator? ErrorTranslator { get; set; }

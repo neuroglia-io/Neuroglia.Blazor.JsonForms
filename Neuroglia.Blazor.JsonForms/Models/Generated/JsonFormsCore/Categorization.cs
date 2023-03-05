@@ -6,7 +6,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// A child element may either be itself a Categorization or a Category, hence
     /// the categorization element can be used to represent recursive structures like trees.
     /// </summary>
-    interface Categorization : UISchemaElement, Labeled
+    public interface Categorization : UISchemaElement, Labeled
     {
         /// <summary>
         /// The child elements of this categorization which are either of type

@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface SetAjvAction
+    public interface SetAjvAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("ajv")]
         Ajv Ajv { get; set; }

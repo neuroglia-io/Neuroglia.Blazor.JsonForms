@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonFormsSubStates
+    public interface JsonFormsSubStates
     {
         /// <summary>
         /// All available cell renderers.

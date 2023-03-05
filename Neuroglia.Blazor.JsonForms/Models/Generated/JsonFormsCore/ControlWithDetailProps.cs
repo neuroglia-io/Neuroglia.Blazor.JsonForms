@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface ControlWithDetailProps : StatePropsOfControlWithDetail, DispatchPropsOfControl
+    public interface ControlWithDetailProps : StatePropsOfControlWithDetail, DispatchPropsOfControl
     {
     }
 }

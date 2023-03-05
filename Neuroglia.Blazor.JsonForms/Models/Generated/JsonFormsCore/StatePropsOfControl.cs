@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// State-based props of a Control
     /// </summary>
-    interface StatePropsOfControl : StatePropsOfScopedRenderer
+    public interface StatePropsOfControl : StatePropsOfScopedRenderer
     {
         /// <summary>
         /// Description of input cell

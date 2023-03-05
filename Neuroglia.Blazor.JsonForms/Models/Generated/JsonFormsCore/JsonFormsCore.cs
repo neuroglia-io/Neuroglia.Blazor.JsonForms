@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonFormsCore
+    public interface JsonFormsCore
     {
         [System.Text.Json.Serialization.JsonPropertyName("additionalErrors")]
         ErrorObject<string, Record<string, object>, object>[]? AdditionalErrors { get; set; }

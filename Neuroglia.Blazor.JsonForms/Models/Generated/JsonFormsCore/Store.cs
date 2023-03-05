@@ -8,7 +8,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// There should only be a single store in a Redux app, as the composition
     /// happens on the reducer level.
     /// </summary>
-    interface Store<S, A>
+    public interface Store<S, A>
     {
         /// <summary>
         /// Dispatches an action. It is the only way to trigger a state change./// The `reducer` function, used to create the store, will be called with the

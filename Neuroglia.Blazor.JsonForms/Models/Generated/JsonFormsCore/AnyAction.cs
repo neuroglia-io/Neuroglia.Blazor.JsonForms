@@ -9,7 +9,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// This is not part of `Action` itself to prevent types that extend `Action` from
     /// having an index signature.
     /// </summary>
-    interface AnyAction : Action
+    public interface AnyAction : Action
     {
         /// <summary>
         /// An Action type which accepts any other properties.

@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// A rule that may be attached to any UI schema element.
     /// </summary>
-    interface Rule
+    public interface Rule
     {
         /// <summary>
         /// The condition of the rule that must evaluate to true in order

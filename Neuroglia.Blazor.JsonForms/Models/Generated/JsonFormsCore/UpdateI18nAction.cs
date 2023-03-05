@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface UpdateI18nAction
+    public interface UpdateI18nAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("errorTranslator")]
         ErrorTranslator ErrorTranslator { get; set; }

@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface OwnPropsOfRenderer
+    public interface OwnPropsOfRenderer
     {
         [System.Text.Json.Serialization.JsonPropertyName("cells")]
         JsonFormsCellRendererRegistryEntry[]? Cells { get; set; }

@@ -1,5 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
-<!--<Project Sdk="Microsoft.NET.Sdk.Razor">-->
+<Project Sdk="Microsoft.NET.Sdk.Razor">
  <PropertyGroup>
     <Nullable>enable</Nullable>
 	 <ImplicitUsings>enable</ImplicitUsings>
@@ -16,12 +15,120 @@
 	 <FileVersion>2.0.1.82</FileVersion>
 	 <NeutralLanguage>en</NeutralLanguage>
 	 <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	 <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	 <PackageLicenseFile>LICENSE</PackageLicenseFile>
-	 <PackageIcon>logo_white_on_blue_256.png</PackageIcon>
+	 <!--<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>-->
+	 <!--<PackageLicenseFile>LICENSE</PackageLicenseFile>-->
+	 <!--<PackageIcon>logo_white_on_blue_256.png</PackageIcon>-->
 	 <IsPackable>true</IsPackable>
 	 <DebugType>embedded</DebugType>
   </PropertyGroup>
+ <ItemGroup>
+   <Compile Remove="Models\Generated\GeneratedTypes\**" />
+   <Content Remove="Models\Generated\GeneratedTypes\**" />
+   <EmbeddedResource Remove="Models\Generated\GeneratedTypes\**" />
+   <None Remove="Models\Generated\GeneratedTypes\**" />
+ </ItemGroup>
+ <ItemGroup>
+   <Compile Remove="Models\Generated\JsonFormsCore\Action.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\AddCellRendererAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\AddRendererAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\AddUISchemaAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\AndCondition.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\AnyAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ArrayControlProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ArrayLayoutProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Categorization.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Category.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\CellProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\CombinatorRendererProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\CombinatorSubSchemaRenderInfo.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ComposableCondition.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ControlElement.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ControlProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ControlState.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ControlWithDetailProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\DispatchCellProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\DispatchCellStateProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\DispatchPropsOfArrayControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\DispatchPropsOfControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\DispatchPropsOfMultiEnumControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\EnumCellProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\EnumOption.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Formatted.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\GroupLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\HorizontalLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\InitAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\InitActionOptions.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Internationalizable.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsCellRendererRegistryEntry.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsCore.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsDefaultDataRegistryEntry.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsExtendedState.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsI18nState.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsRendererRegistryEntry.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsState.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsStore.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsSubStates.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonFormsUISchemaRegistryEntry.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonSchema4.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\JsonSchema7.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Labelable.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\LabelDescription.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Labeled.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\LabelElement.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\LabelProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Layout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\LayoutProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\LeafCondition.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OrCondition.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfCell.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfEnum.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfEnumCell.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfJsonFormsRenderer.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfLabel.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfMasterListItem.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\OwnPropsOfRenderer.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\ReferenceSchemaMap.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\RegisterDefaultDataAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\RemoveCellRendererAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\RemoveRendererAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\RemoveUISchemaAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\RendererProps.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SchemaBasedCondition.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Scopable.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Scoped.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetAjvAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetConfigAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetLocaleAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetSchemaAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetTranslatorAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetUISchemaAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\SetValidationModeAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfArrayControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfArrayLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfCell.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfCombinator.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfControl.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfControlWithDetail.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfEnumCell.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfJsonFormsRenderer.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfLabel.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfMasterItem.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfRenderer.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\StatePropsOfScopedRenderer.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\Store.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\TesterContext.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\UnregisterDefaultDataAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\UpdateAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\UpdateCoreAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\UpdateErrorsAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\UpdateI18nAction.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\VerticalLayout.cs" />
+   <Compile Remove="Models\Generated\JsonFormsCore\WithClassname.cs" />
+ </ItemGroup>
 
   <ItemGroup>
     <SupportedPlatform Include="browser" />
@@ -29,10 +136,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Models\Generated\" />
   </ItemGroup>
 
 </Project>

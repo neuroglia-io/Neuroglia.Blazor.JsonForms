@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface JsonFormsProps : StatePropsOfJsonFormsRenderer
+    public interface JsonFormsProps : StatePropsOfJsonFormsRenderer
     {
     }
 }

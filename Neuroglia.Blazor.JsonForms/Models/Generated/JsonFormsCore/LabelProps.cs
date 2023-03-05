@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface LabelProps : StatePropsOfLabel
+    public interface LabelProps : StatePropsOfLabel
     {
     }
 }

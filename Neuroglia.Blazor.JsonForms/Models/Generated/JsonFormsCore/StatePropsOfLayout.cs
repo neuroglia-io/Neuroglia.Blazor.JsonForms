@@ -4,7 +4,7 @@ namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
     /// <summary>
     /// State props of a layout;
     /// </summary>
-    interface StatePropsOfLayout : StatePropsOfRenderer
+    public interface StatePropsOfLayout : StatePropsOfRenderer
     {
         /// <summary>
         /// Direction for the layout to flow

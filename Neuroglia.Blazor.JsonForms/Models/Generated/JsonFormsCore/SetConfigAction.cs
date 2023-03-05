@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface SetConfigAction
+    public interface SetConfigAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("config")]
         object Config { get; set; }

@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface OwnPropsOfMasterListItem
+    public interface OwnPropsOfMasterListItem
     {
         [System.Text.Json.Serialization.JsonPropertyName("index")]
         double Index { get; set; }

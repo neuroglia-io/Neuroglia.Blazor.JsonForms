@@ -1,0 +1,161 @@
+﻿@using Microsoft.JSInterop;
+@using Neuroglia.Blazor.JsonForms.Models.JsonFormsCore;
+@using System.Text.Json;
+@implements IAsyncDisposable;
+@inject JsonFormsJsInterop JsonFormsJsInterop;
+
+<ng-jsonforms @ref="domElement"></ng-jsonforms>
+
+@code {
+    /// <summary>
+    /// A reference to the JSON Form web component
+    /// </summary>
+    private ElementReference domElement;
+    /// <summary>
+    /// A Dotnet reference of the current form, used for interop
+    /// </summary>
+    private DotNetObjectReference<JsonForm>? dotnetReference = null;
+    /// <summary>
+    /// A javascript reference of the current form, used for interop
+    /// </summary>
+    private IJSObjectReference? jsReference = null;
+    /// <summary>
+    /// The mapped parametters passed to the web component
+    /// </summary>
+    private JsonFormInputs inputs = new JsonFormInputs();
+    /// <summary>
+    /// Indicates whether or not the componenet has been disposed
+    /// </summary>
+    private bool disposed;
+
+    /// <summary>
+    /// The UI schema used to build the form
+    /// </summary>
+    [Parameter] public object? UISchema { get; set; }
+    /// <summary>
+    /// The JSON schema used to build the form
+    /// </summary>
+    [Parameter] public object? Schema { get; set; }
+    /// <summary>
+    /// The default data used to build the form
+    /// </summary>
+    [Parameter] public object? Data { get; set; }
+    /// <summary>
+    /// The AJV options
+    /// </summary>
+    [Parameter] public object? Options { get; set; }
+    /// <summary>
+    /// Defines if the form is read only
+    /// </summary>
+    [Parameter] public bool ReadOnly { get; set; } = false;
+    /* map other params when PoC is done */
+
+    /// <summary>
+    /// Emits when the form data changes
+    /// </summary>
+    [Parameter] public EventCallback<object> DataChange { get; set; }
+    /// <summary>
+    /// Emits when the form has errors
+    /// </summary>
+    [Parameter] public EventCallback<List<object>> Errors { get; set; }
+
+    /// <inheritdoc/>
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            this.dotnetReference = DotNetObjectReference.Create(this);
+            await this.Reset();
+        }
+        await base.OnAfterRenderAsync(firstRender);
+    }
+
+    /// <inheritdoc/>
+    protected override async Task OnParametersSetAsync()
+    {
+        bool hasChanged = false;
+        if (this.UISchema != this.inputs.UISchema)
+        {
+            this.inputs.UISchema = this.UISchema;
+            hasChanged = true;
+        }
+        if (this.Schema != this.inputs.Schema)
+        {
+            this.inputs.Schema = this.Schema;
+            hasChanged = true;
+        }
+        if (this.Data != this.inputs.Data)
+        {
+            this.inputs.Data = this.Data;
+            hasChanged = true;
+        }
+        if (this.ReadOnly != this.inputs.ReadOnly)
+        {
+            this.inputs.ReadOnly = this.ReadOnly;
+            hasChanged = true;
+        }
+        if (this.Options != this.inputs.Options)
+        {
+            this.inputs.Options = this.Options;
+            hasChanged = true;
+        }
+        if (hasChanged) await this.Reset();
+        await base.OnParametersSetAsync();
+    }
+
+    protected async Task Reset()
+    {
+        if (this.jsReference != null)
+        {
+            await this.jsReference.InvokeVoidAsync("disconnect");
+            await this.jsReference.DisposeAsync();
+            this.jsReference = null;
+        }
+        if (this.dotnetReference != null)  this.jsReference = await this.JsonFormsJsInterop.BindWebComponentAsync(this.domElement, this.dotnetReference, this.inputs);
+        this.StateHasChanged();
+    }
+
+    /// <summary>
+    /// The method invoked by the js interop when the form data changes
+    /// </summary>
+    /// <param name="data">The updated form data</param>
+    /// <returns></returns>
+    [JSInvokable]
+    public async Task OnDataChange(object data)
+    {
+        await this.DataChange.InvokeAsync(data);
+    }
+
+    /// <summary>
+    /// The method invoked by the js interop when the form has errors
+    /// </summary>
+    /// <param name="errors">The form erros</param>
+    /// <returns></returns>
+    [JSInvokable]
+    public async Task OnErrors(List<object> errors)
+    {
+        await this.Errors.InvokeAsync(errors);
+    }
+
+
+    /// <inheritdoc/>
+    public async ValueTask DisposeAsync()
+    {
+        if (!this.disposed)
+        {
+            if (this.jsReference != null)
+            {
+                await this.jsReference.InvokeVoidAsync("disconnect");
+                await this.jsReference.DisposeAsync();
+                this.jsReference = null;
+            }
+            if (this.dotnetReference != null)
+            {
+                this.dotnetReference.Dispose();
+                this.dotnetReference = null;
+            }
+            this.disposed = true;
+        }
+    }
+
+}

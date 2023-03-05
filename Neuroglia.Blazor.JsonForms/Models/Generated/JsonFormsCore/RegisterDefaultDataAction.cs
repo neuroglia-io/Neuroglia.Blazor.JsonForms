@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface RegisterDefaultDataAction
+    public interface RegisterDefaultDataAction
     {
         [System.Text.Json.Serialization.JsonPropertyName("data")]
         object Data { get; set; }

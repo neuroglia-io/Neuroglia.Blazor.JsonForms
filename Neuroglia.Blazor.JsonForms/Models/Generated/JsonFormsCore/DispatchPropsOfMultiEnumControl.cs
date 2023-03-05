@@ -1,7 +1,7 @@
 namespace Neuroglia.Blazor.JsonForms.Models.JsonFormsCore
 {
 
-    interface DispatchPropsOfMultiEnumControl
+    public interface DispatchPropsOfMultiEnumControl
     {
         [System.Text.Json.Serialization.JsonPropertyName("addItem")]
         System.Action<string, object> AddItem { get; set; }

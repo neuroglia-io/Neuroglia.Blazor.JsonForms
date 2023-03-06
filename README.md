@@ -28,9 +28,7 @@ A Blazor wrapper for [JSON Forms](https://github.com/eclipsesource/jsonforms), r
 <body>
     <!-- ... --->
     <!-- JSON Forms related -->
-    <script src="_content/Neuroglia.Blazor.JsonForms/lib/jsonforms-angular-webcomponent/runtime.js" type="module"></script>
-    <script src="_content/Neuroglia.Blazor.JsonForms/lib/jsonforms-angular-webcomponent/polyfills.js" type="module"></script>
-    <script src="_content/Neuroglia.Blazor.JsonForms/lib/jsonforms-angular-webcomponent/vendor.js" type="module"></script>
+    <script src="_content/Neuroglia.Blazor.JsonForms/lib/jsonforms-angular-webcomponent/polyfills.js" type="module"></script><!-- optional, might already been provided elsewhere -->
     <script src="_content/Neuroglia.Blazor.JsonForms/lib/jsonforms-angular-webcomponent/main.js" type="module"></script>
     <!-- End of JSON Forms related -->
     <!-- ... --->

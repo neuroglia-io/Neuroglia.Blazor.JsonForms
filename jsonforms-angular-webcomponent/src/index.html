@@ -20,38 +20,74 @@
     setTimeout(() => {
       // Data
       const schema = {
-        type: "object",
-        title: "Person",
-        properties: {
-          name: {
-            type: "string",
-            minLength: 3,
+        "type": "object",
+        "title": "Person",
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 3
           },
-          birthDate: {
-            type: "string",
-            format: "date",
+          "birthDate": {
+            "type": "string",
+            "format": "date"
           },
-          foo: {
-            type: "boolean",
-            default: true,
+          "foo": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      };
+      const uischema = {
+        "type": "VerticalLayout",
+        "elements": [
+          {
+            "type": "Control",
+            "scope": "#/properties/foo",
+            "label": "Toggle fields visibility"
           },
-        },
+          {
+            "type": "HorizontalLayout",
+            "elements": [
+              {
+                "type": "Control",
+                "scope": "#/properties/name"
+              },
+              {
+                "type": "Control",
+                "scope": "#/properties/birthDate"
+              }
+            ],
+            "rule": {
+              "effect": "SHOW",
+              "condition": {
+                "type": "LEAF",
+                "scope": "#/properties/foo",
+                "expectedValue": true
+              }
+            }
+          }
+        ]
       };
       const data = { name: 5 };
       const options = { useDefaults: true };
+      const readonly = true;
 
       // Using JsonForms with objects
       const formWithObj = document.getElementById('with-object');
       formWithObj.schema = schema;
+      formWithObj.uischema = uischema;
       formWithObj.data = data;
       formWithObj.options = options;
+      //formWithObj.readonly = readonly;
       formWithObj.addEventListener('dataChange', (evt) => console.log("with-object:dataChange", evt.detail));
 
       // Using JsonFroms with string, like <ng-jsonforms schema='{"type": "object"...}'...></ng-jsonforms>
       const formWithJson = document.getElementById('with-json');
       formWithJson.schema = JSON.stringify(schema);
+      formWithJson.uischema = JSON.stringify(uischema);
       formWithJson.data = JSON.stringify(data);
       formWithJson.options = JSON.stringify(options);
+      //formWithJson.readonly = JSON.stringify(readonly);
       formWithJson.addEventListener('dataChange', (evt) => console.log("with-json:dataChange", evt.detail));
     }, 1000);
   </script>

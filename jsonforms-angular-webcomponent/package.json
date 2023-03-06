@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "npx ng",
     "start": "npx ng serve",
-    "build:dev": "npx ng build --configuration development --output-hashing none  --output-path ../Neuroglia.Blazor.JsonForms/wwwroot/lib/jsonforms-angular-webcomponent",
-    "build": "npx ng build --configuration production --output-hashing none  --output-path ../Neuroglia.Blazor.JsonForms/wwwroot/lib/jsonforms-angular-webcomponent",
+    "build:dev": "npx ng build --configuration development  --single-bundle --output-hashing none  --output-path ../Neuroglia.Blazor.JsonForms/wwwroot/lib/jsonforms-angular-webcomponent",
+    "build": "npx ng build --configuration production  --single-bundle --output-hashing none  --output-path ../Neuroglia.Blazor.JsonForms/wwwroot/lib/jsonforms-angular-webcomponent",
     "watch": "npx ng build --watch --configuration development",
     "test": "npx ng test"
   },
@@ -26,6 +26,7 @@
     "@jsonforms/angular": "^3.0.0",
     "@jsonforms/angular-material": "^3.0.0",
     "@jsonforms/core": "^3.0.0",
+    "ngx-build-plus": "^15.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
